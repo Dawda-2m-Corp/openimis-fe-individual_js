@@ -215,11 +215,11 @@ function GroupUploadTaskDisplay({
 
   const [approveOrFail, setApproveOrFail] = useState('');
   const [confirmed, setConfirmed] = useState(null);
-  const [openModal, setOpenModal] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
   const [disabled, setDisable] = useState(false);
 
   const clear = () => {
-    setOpenModal(null);
+    setOpenModal(false);
     setApproveOrFail('');
     setConfirmed('');
   };
@@ -356,7 +356,7 @@ function GroupUploadConfirmationPanel({ defaultAction, defaultDisabled }) {
   const currentUser = useSelector((state) => state.core.user);
   const [disabled, setDisable] = useState(defaultDisabled);
 
-  const [openModal, setOpenModal] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
   const [approveOrFail, setApproveOrFail] = useState('');
   const [confirmed, setConfirmed] = useState('');
 
@@ -378,7 +378,7 @@ function GroupUploadConfirmationPanel({ defaultAction, defaultDisabled }) {
   const isRowDisabled = () => !isCurrentUserInTaskGroup() || task?.status !== TASK_STATUS.ACCEPTED;
 
   const clear = () => {
-    setOpenModal(null);
+    setOpenModal(false);
     setApproveOrFail('');
     setConfirmed('');
   };

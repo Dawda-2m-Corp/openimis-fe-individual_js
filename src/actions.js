@@ -564,9 +564,6 @@ export function resolveTask(task, clientMutationLabel, user, approveOrFail, addi
     },
   );
 
-  // eslint-disable-next-line no-param-reassign
-  user.clientMutationId = mutation.clientMutationId;
-
   return graphqlWithVariables(
     mutation2.operation,
     {
@@ -574,7 +571,7 @@ export function resolveTask(task, clientMutationLabel, user, approveOrFail, addi
     },
     ['TASK_MANAGEMENT_MUTATION_REQ', 'TASK_MANAGEMENT_MUTATION_RESP', 'TASK_MANAGEMENT_MUTATION_ERR'],
     {
-      requestedDateTime, clientMutationId: mutation.clientMutationId, clientMutationLabel, userId: user.id,
+      requestedDateTime, clientMutationId: mutation.clientMutationId, clientMutationLabel, userId,
     },
   );
 }

@@ -215,6 +215,8 @@
   "groupTaskConfirmation.title": "Group Upload Confirmation",
   "dialogActions.continue": "Continue",
   "dialogActions.goBack": "Cancel",
+  "selectForEvaluation": "Select for evaluation",
+  "Select for evaluation": "Select for evaluation",
   "ImportPageAPI.ImportPage": "Import Data - API",
   "ImportPageAPI.apiSelection": "Selected API",
   "ImportPageAPI.workflowName": "Workflow Name",
